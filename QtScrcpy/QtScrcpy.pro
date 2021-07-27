@@ -48,10 +48,6 @@ HEADERS += \
 FORMS += \
         dialog.ui
 
-# 试用检查
-# DEFINES += TRIAL_EXPIRE_CHECK
-DEFINES += TRIAL_TIMES=10
-
 # 子工程
 include ($$PWD/common/common.pri)
 include ($$PWD/adb/adb.pri)
@@ -179,7 +175,6 @@ macos {
     APP_CONFIG.files = $$files($$PWD/../config/config.ini)
     APP_CONFIG.path = Contents/MacOS/config
     QMAKE_BUNDLE_DATA += APP_CONFIG
-
     # mac application icon
     ICON = $$PWD/res/QtScrcpy.icns
     QMAKE_INFO_PLIST = $$PWD/res/Info_Mac.plist
